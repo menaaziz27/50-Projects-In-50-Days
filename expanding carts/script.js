@@ -1,6 +1,4 @@
 const panels = document.querySelectorAll('.panel');
-console.log('test');
-console.log(panels);
 panels.forEach(panel => {
 	panel.addEventListener('click', () => {
 		removeActiveClasses();
