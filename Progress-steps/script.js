@@ -18,9 +18,10 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
 	currentActive--;
 
-	if (currentActive < 1) {
+	if (currentActive <= 1) {
 		currentActive = 1;
 	}
+	console.log(currentActive);
 
 	update();
 });
@@ -39,7 +40,7 @@ function update() {
 	progress.style.width = ((actives.length - 1) / (circles.length - 1)) * 100 + '%';
 
 	if (currentActive === 1) {
-		prev.disableed = true;
+		prev.disabled = true;
 	} else if (currentActive === 4) {
 		next.disabled = true;
 	} else {
